@@ -39,8 +39,8 @@ from tools.i18n.i18n import I18nAuto
 parser = argparse.ArgumentParser(description="IndexTTS Parallel WebUI")
 parser.add_argument("--verbose", action="store_true", default=False, help="Enable verbose logging")
 parser.add_argument("--port", type=int, default=7862, help="Port for the web UI")
-parser.add_argument("--host", type=str, default="0.0.0.0", help="Host for the web UI")
-parser.add_argument("--model_dir", type=str, default="checkpoints", help="Model checkpoints directory")
+parser.add_argument("--host", type=str, default="", help="Host for the web UI")
+parser.add_argument("--model_dir", type=str, default="0- checkpoints", help="Model checkpoints directory")
 parser.add_argument("--is_fp16", action="store_true", default=False, help="Enable fp16 inference")
 cmd_args = parser.parse_args()
 
@@ -1641,3 +1641,4 @@ def main():
 if __name__ == "__main__":
     mp.set_start_method("spawn", force=True)
     main()
+
